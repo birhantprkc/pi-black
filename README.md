@@ -2,7 +2,7 @@
 
 Use your Claude Max (or Pro) subscription with Pi.
 
-Pi Black is an unofficial Pi package that routes Anthropic OAuth requests through your existing Claude subscription usage by applying Claude Code 2.1.258 request conventions. The existing source patch and standalone-binary build system remain available as a fallback.
+Pi Black is an unofficial Pi package that routes Anthropic OAuth requests through your existing Claude subscription usage by applying Claude Code 2.1.280 request conventions. The existing source patch and standalone-binary build system remain available as a fallback.
 
 ## Install
 
@@ -12,7 +12,7 @@ Pi Black has three independently versioned compatibility surfaces:
 | --- | --- |
 | Pi package | Pi 0.84.1 or newer |
 | Standalone `pi-black` binary | Based on Pi 0.84.1 |
-| Claude Code protocol | 2.1.258 |
+| Claude Code protocol | 2.1.280 |
 
 The Pi package requires Pi 0.84.1 or newer, with no upper version limit. Future Pi releases are trusted until an incompatibility is identified; the package peer dependencies are `"*"` because Pi supplies its core packages at runtime.
 
@@ -29,7 +29,7 @@ pi update --extensions
 For a reproducible install, pin a release tag:
 
 ```sh
-pi install git:github.com/paoloanzn/pi-black@v0.84.1-cc2.1.258.1
+pi install git:github.com/paoloanzn/pi-black@v0.84.1-cc2.1.280.1
 ```
 
 Pinned packages do not move automatically. Install a newer tagged ref explicitly when you are ready to upgrade.
@@ -83,7 +83,7 @@ The installed launcher checks the latest release checksum at interactive startup
 Install a specific standalone release with `PI_BLACK_RELEASE`:
 
 ```sh
-curl -fsSL https://github.com/paoloanzn/pi-black/releases/latest/download/install.sh | PI_BLACK_RELEASE=v0.84.1-cc2.1.258.1 sh
+curl -fsSL https://github.com/paoloanzn/pi-black/releases/latest/download/install.sh | PI_BLACK_RELEASE=v0.84.1-cc2.1.280.1 sh
 ```
 
 The repository pins an immutable commit from [`paoloanzn/pi`](https://github.com/paoloanzn/pi), applies the patch under `patches/`, and delegates standalone compilation to Pi's release builder.

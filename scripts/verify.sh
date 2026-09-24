@@ -29,7 +29,7 @@ fi
 
 cd "$source_dir"
 npm ci --ignore-scripts
-npx tsx packages/ai/scripts/generate-models.ts --strict --data-only
+npx tsx packages/ai/scripts/generate-models.ts --strict
 node "$source_dir/node_modules/vitest/dist/cli.js" --run \
     packages/ai/test/anthropic-claude-code.test.ts \
     packages/ai/test/anthropic-auth-token.test.ts
